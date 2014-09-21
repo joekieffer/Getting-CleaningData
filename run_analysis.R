@@ -37,7 +37,7 @@ masterTest <- cbind(subTest,subTestY,subTestX)
 
 #joining Train and Test
 allData <- rbind(masterTrain, masterTest)
-#allData <- arrange(allData, subject, training)
+allData <- arrange(allData, subject, training)
 
 #labeling the training data
 allData$training[allData$training == "1"] <- "WALKING"
@@ -47,4 +47,9 @@ allData$training[allData$training == "4"] <- "SITTING"
 allData$training[allData$training == "5"] <- "STANDING"
 allData$training[allData$training == "6"] <- "LAYING"
 
-write.table(allData, file="run_analysis_DF",row.names=FALSE)
+#Step 5 averaging the data set
+dataMelt <- melt(allData, measure.vars=filterMeanSTD)
+newDF <- dcast(dataMelt, subject + training ~ variable, mean)
+
+#Last step, save the data out 
+write.table(newDF, file="run_analysis_DF",row.names=FALSE)
