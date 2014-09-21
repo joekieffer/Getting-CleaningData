@@ -52,4 +52,4 @@ dataMelt <- melt(allData, measure.vars=filterMeanSTD)
 newDF <- dcast(dataMelt, subject + training ~ variable, mean)
 
 #Last step, save the data out 
-write.table(newDF, file="run_analysis_DF",row.names=FALSE)
+write.table(newDF, file="run_analysis_DF.txt",row.names=FALSE)
