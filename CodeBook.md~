@@ -19,12 +19,8 @@ Features of the data frame
 
 The data frame has the mean data for activitys performed by subject. There will be a maximum total of six entrys per subject. The following data will be included in each row. 
 
-"subject" - This is a numeric repersenetation of subjects in the Training and Test data sets. They are numbered 1:30
-
-"training" - This is the actions that were performed by the subjects. WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, and LAYING are the possable variables. 
-
-The follwoing variables denoted with a t in the beginning were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing. Each of the Variables in the output are a mean repersesntation for each subjects training activity. 
-
+"subject"
+"training"
 "tBodyAcc-mean()-X"
 "tBodyAcc-mean()-Y"
 "tBodyAcc-mean()-Z"
@@ -91,6 +87,3 @@ The follwoing variables denoted with a t in the beginning were captured at a con
 "fBodyBodyAccJerkMag-std()" 
 "fBodyBodyGyroMag-std()"
 "fBodyBodyGyroJerkMag-std()" 
-
-mean(): Mean value
-std(): Standard deviation
