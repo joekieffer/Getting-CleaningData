@@ -1,5 +1,6 @@
 #setting work space for computation
 setwd("/media/removable/USB Drive/Data Science/R Programming - Class 3/UCI HAR Dataset")
+library(reshape2)
 
 #getting global vaviables for each data set
 featureLable <- read.table("features.txt")
